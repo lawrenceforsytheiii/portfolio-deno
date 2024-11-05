@@ -1,4 +1,3 @@
-import { Storybook } from "https://esm.sh/@storybook/react";
 import tailwindConfig from "../tailwind.config.ts";
 
 export default {
