@@ -4,8 +4,7 @@ import forms from "https://esm.sh/@tailwindcss/forms";
 
 export default {
   content: [
-    "{routes,islands,components,stories}/**/*.{ts,tsx,js,jsx}",
-    "components/{atoms,molecules,organisms,layouts,pages}/**/*.{ts,tsx}",
+    "{routes,islands,components}/**/*.{ts,tsx,js,jsx}",
     "stories/{atoms,molecules,organisms,layouts,pages}/**/*.{ts,tsx}",
   ],
   plugins: [typography, forms],

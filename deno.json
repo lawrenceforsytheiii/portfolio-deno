@@ -7,6 +7,7 @@
     "start": "deno run -A --watch=static/,routes/ dev.ts",
     "build": "deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
+    "storybook": "deno run -A .storybook/main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update ."
   },
   "lint": {
@@ -29,20 +30,19 @@
     "react": "https://esm.sh/react@18.2.0",
     "react-dom": "https://esm.sh/react-dom@18.2.0",
     "@mui/material": "https://esm.sh/@mui/material@5.13.7",
-    "@mui/material/styles": "https://esm.sh/@mui/material@6.1.6/styles",
-    "@mui/system": "https://esm.sh/@mui/system",
     "@emotion/react": "https://esm.sh/@emotion/react@11.10.4",
     "@emotion/styled": "https://esm.sh/@emotion/styled@11.10.4",
-    "@storybook/react": "https://esm.sh/@storybook/react@7.0.0",
-    "@storybook/addon-essentials": "https://esm.sh/@storybook/addon-essentials@7.0.0",
+    "@storybook/react": "https://esm.sh/@storybook/react@8.0.0",
+    "@storybook/addon-essentials": "https://esm.sh/@storybook/addon-essentials@8.0.0",
     "tailwindcss": "npm:tailwindcss@3.4.1",
     "tailwindcss/": "npm:/tailwindcss@3.4.1/",
     "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
     "$std/": "https://deno.land/std@0.216.0/"
   },
   "compilerOptions": {
+    "lib": ["dom", "deno.ns", "deno.window"],
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "jsxImportSource": "https://esm.sh/react@18.2.0"
   },
-  "nodeModulesDir": true
+  "nodeModulesDir": "auto"
 }

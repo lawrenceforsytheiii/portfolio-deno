@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import MuiThemeProvider from "../components/MuiThemeProvider.tsx";
 import Button from "../components/Button.tsx";
 

@@ -1,23 +1,17 @@
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import Button from "../components/Button.tsx";
 
 export default {
-  title: "Components/Button",
+  title: "Atoms/Button",
   component: Button,
 } as Meta;
 
-const Template: Story<{ label: string }> = (args) => <Button {...args} />;
+const Template: StoryFn<{ label: string; color: "primary" | "inherit" | "secondary" | "success" | "error" | "info" | "warning" }> = (args) => (
+  <Button {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
   label: "Click Me",
   color: "primary",
-  variant: "contained",
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: "Secondary Button",
-  color: "secondary",
-  variant: "outlined",
 };
