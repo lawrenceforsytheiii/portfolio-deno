@@ -1,4 +1,3 @@
-import { h } from 'preact';
 import { Head } from "$fresh/runtime.ts";
 import { MeteorShower } from "../components/MeteorShower.tsx";
 

@@ -3,8 +3,9 @@ import plugin from "tailwindcss/plugin";
 
 export default {
   content: [
-    "{routes,islands,components}/**/*.{ts,tsx,js,jsx}",
+    "{routes,islands,components,stories}/**/*.{ts,tsx,js,jsx}",
   ],
+  darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     extend: {
       backgroundImage: {
