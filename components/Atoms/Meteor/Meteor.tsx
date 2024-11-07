@@ -1,4 +1,4 @@
-import { random } from "../../../utils/random.ts";
+import { random } from "@/utils/random.ts";
 
 export interface MeteorProps {
   animationDelay: number;
