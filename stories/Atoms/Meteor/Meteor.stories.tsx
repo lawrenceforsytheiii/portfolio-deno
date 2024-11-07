@@ -1,4 +1,4 @@
-import { Meteor } from '../components/Meteor.tsx';
+import { Meteor } from '../../../components/Atoms/Meteor/Meteor.tsx';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {

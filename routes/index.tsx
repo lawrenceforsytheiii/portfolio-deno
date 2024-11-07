@@ -1,5 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
-import { MeteorShower } from "../components/MeteorShower.tsx";
+import { MeteorShower } from "../components/Molecules/MeteorShower/MeteorShower.tsx";
 
 export default function Home() {
   return (

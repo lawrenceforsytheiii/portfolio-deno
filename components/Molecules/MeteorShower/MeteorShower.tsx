@@ -1,5 +1,5 @@
-import { random } from "../utils/random.ts";
-import { Meteor } from "./Meteor.tsx";
+import { random } from "../../../utils/random.ts";
+import { Meteor } from "../../Atoms/Meteor/Meteor.tsx";
 
 export const MeteorShower = () => {
   const meteors = Array.from({ length: 20 }, () => ({
