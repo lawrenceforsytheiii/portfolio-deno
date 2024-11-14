@@ -17,6 +17,10 @@
       ]
     }
   },
+  "fmt": {
+    "lineWidth": 120,
+    "singleQuote": true
+  },
   "exclude": [
     "**/_fresh/*",
     "**/.storybook/*",

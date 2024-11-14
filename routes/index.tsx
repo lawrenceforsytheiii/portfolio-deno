@@ -1,5 +1,5 @@
-import { Head } from "$fresh/runtime.ts";
-import { MeteorShower } from "@/molecules/MeteorShower/MeteorShower.tsx";
+import { Head } from '$fresh/runtime.ts';
+import { MeteorShower } from '@/molecules/MeteorShower/MeteorShower.tsx';
 
 export default function Home() {
   return (
@@ -8,17 +8,17 @@ export default function Home() {
         <title>portfolio-deno</title>
       </Head>
       <div
-        className="bg-black h-screen overflow-hidden flex justify-center items-center"
+        className='bg-black h-screen overflow-hidden flex justify-center items-center'
         style={{
           background: 'radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)',
         }}
       >
         <MeteorShower />
-        <div className="absolute h-screen w-screen" style={{ bottom: '-30%' }}>
+        <div className='absolute h-screen w-screen' style={{ bottom: '-30%' }}>
           <img
-            src="/asteroid.svg"
-            alt="asteroid"
-            className="animate-rotate"
+            src='/asteroid.svg'
+            alt='asteroid'
+            className='animate-rotate'
             style={{
               animation: 'rotate 240s linear infinite',
             }}
