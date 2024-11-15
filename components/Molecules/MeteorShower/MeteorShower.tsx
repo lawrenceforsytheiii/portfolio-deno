@@ -1,4 +1,5 @@
 import { Meteor } from '@/atoms/Meteor/Meteor.tsx';
+import { meteorShowerDynamicStyles, meteorShowerInlineStyles } from './MeteorShower.styles.ts';
 import { MeteorShowerProps } from './MeteorShower.types.ts';
 import { random } from '@/utils/random.ts';
 
@@ -22,7 +23,7 @@ export const MeteorShower = ({
   }));
 
   return (
-    <div className='h-full w-full relative' style={{ transform: 'rotateZ(-30deg)' }}>
+    <div className={meteorShowerInlineStyles} style={meteorShowerDynamicStyles()}>
       {meteors.map((meteor) => <Meteor key={meteor.index} {...meteor} />)}
     </div>
   );
