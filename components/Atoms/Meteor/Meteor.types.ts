@@ -1,7 +1,7 @@
 export interface MeteorProps {
   animationDelay: number;
   dropShadowColor: string;
-  meteorSize: number;
+  index: number;
   rightValue: string;
   shineColor: string;
   tailColor: string;

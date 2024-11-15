@@ -1,4 +1,3 @@
-import { MeteorProps } from './Meteor.types.ts';
 import {
   meteorKeyframes,
   meteorShineInlineStyles,
@@ -7,17 +6,18 @@ import {
   meteorTailDynamicStyles,
   meteorTailInlineStyles,
 } from './Meteor.styles.ts';
+import { MeteorProps } from './Meteor.types.ts';
 
 export const Meteor = (
   {
     animationDelay,
-    meteorSize,
-    tailLength,
     dropShadowColor,
-    tailColor,
-    shineColor,
-    topValue,
+    index,
     rightValue,
+    shineColor,
+    tailColor,
+    tailLength,
+    topValue,
   }: MeteorProps,
 ) => {
   return (
@@ -25,25 +25,26 @@ export const Meteor = (
       data-testid='meteor-tail'
       className={meteorTailInlineStyles}
       style={meteorTailDynamicStyles(
-        tailColor,
-        dropShadowColor,
-        topValue,
-        rightValue,
         animationDelay,
+        dropShadowColor,
+        index,
+        rightValue,
+        tailColor,
+        topValue,
       )}
     >
       <style>
-        {meteorKeyframes(tailLength, meteorSize)}
+        {meteorKeyframes(index, tailLength)}
       </style>
       <div
         data-testid='meteor-shine-right'
         className={meteorShineInlineStyles}
-        style={meteorShineRightDynamicStyles(shineColor, animationDelay)}
+        style={meteorShineRightDynamicStyles(animationDelay, index, shineColor)}
       />
       <div
         data-testid='meteor-shine-left'
         className={meteorShineInlineStyles}
-        style={meteorShineLeftDynamicStyles(shineColor, animationDelay)}
+        style={meteorShineLeftDynamicStyles(animationDelay, index, shineColor)}
       />
     </div>
   );

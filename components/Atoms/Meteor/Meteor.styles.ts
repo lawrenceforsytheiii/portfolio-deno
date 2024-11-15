@@ -4,53 +4,56 @@ export const meteorShineInlineStyles =
   'absolute top-[calc(50%-1px)] left-0 h-[2px] bg-gradient-to-r from-transparent to-transparent rounded-full';
 
 export const meteorTailDynamicStyles = (
-  tailColor: string,
-  dropShadowColor: string,
-  topValue: string,
-  rightValue: string,
   animationDelay: number,
+  dropShadowColor: string,
+  index: number,
+  rightValue: string,
+  tailColor: string,
+  topValue: string,
 ) => ({
   background: `linear-gradient(30deg, ${tailColor}, rgba(0, 0, 255, 0))`,
   top: topValue,
   right: rightValue,
   filter: `drop-shadow(0 0 6px ${dropShadowColor})`,
-  animation: 'tail 5000ms ease-in-out infinite, shooting 5000ms ease-in-out infinite',
+  animation: `tail${index} 5000ms ease-in-out infinite, shooting${index} 5000ms ease-in-out infinite`,
   animationDelay: `${animationDelay}ms`,
 });
 
 export const meteorShineRightDynamicStyles = (
-  shineColor: string,
   animationDelay: number,
+  index: number,
+  shineColor: string,
 ) => ({
   background: `linear-gradient(to right, transparent, ${shineColor}, transparent)`,
-  animation: 'shining 5000ms ease-in-out infinite',
+  animation: `shining${index} 5000ms ease-in-out infinite`,
   animationDelay: `${animationDelay}ms`,
   transform: 'translateX(-50%) rotateZ(45deg)',
 });
 
 export const meteorShineLeftDynamicStyles = (
-  shineColor: string,
   animationDelay: number,
+  index: number,
+  shineColor: string,
 ) => ({
   background: `linear-gradient(to right, transparent, ${shineColor}, transparent)`,
-  animation: 'shining 5000ms ease-in-out infinite',
+  animation: `shining${index} 5000ms ease-in-out infinite`,
   animationDelay: `${animationDelay}ms`,
   transform: 'translateX(-50%) rotateZ(-45deg)',
 });
 
-export const meteorKeyframes = (tailLength: number, meteorSize: number) => `
-  @keyframes tail {
+export const meteorKeyframes = (index: number, tailLength: number) => `
+  @keyframes tail${index} {
     0% { width: 0 }
     30% { width: ${tailLength}px }
     100% { width: 0 }
   }
-  @keyframes shining {
+  @keyframes shining${index} {
     0% { width: 0 }
-    50% { width: ${meteorSize}px }
+    50% { width: calc(${tailLength}px * .10) }
     100% { width: 0 }
   }
-  @keyframes shooting {
-    0% { transform: translateX(300px) }
+  @keyframes shooting${index} {
+    0% { transform: translateX(calc(${tailLength}px * 3)) }
     100% { transform: translateX(0) }
   }
 `;
