@@ -1,7 +1,7 @@
-import { Meteor } from '@/atoms/Meteor/Meteor.tsx';
+import { Meteor } from '#atoms/Meteor/Meteor.tsx';
 import { meteorShowerDynamicStyles, meteorShowerInlineStyles } from './MeteorShower.styles.ts';
 import { MeteorShowerProps } from './MeteorShower.types.ts';
-import { random } from '@/utils/random.ts';
+import { random } from '#utils/random.ts';
 
 export const MeteorShower = ({
   dropShadowColor = 'rgba(105, 155, 255, 1)',

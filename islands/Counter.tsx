@@ -1,5 +1,5 @@
 import type { Signal } from '@preact/signals';
-import { Button } from '@/atoms/Button/Button.tsx';
+import { Button } from '#atoms/Button/Button.tsx';
 
 interface CounterProps {
   count: Signal<number>;

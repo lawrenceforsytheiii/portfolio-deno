@@ -36,11 +36,11 @@
     "tailwindcss/": "npm:/tailwindcss@3.4.1/",
     "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
     "$std/": "https://deno.land/std@0.216.0/",
-    "@/atoms/": "./components/atoms/",
-    "@/molecules/": "./components/molecules/",
-    "@/organisms/": "./components/organisms/",
-    "@/static/": "./static/",
-    "@/utils/": "./utils/"
+    "#atoms/": "./components/atoms/",
+    "#molecules/": "./components/molecules/",
+    "#organisms/": "./components/organisms/",
+    "#static/": "./static/",
+    "#utils/": "./utils/"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
